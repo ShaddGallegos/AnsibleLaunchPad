@@ -1,6 +1,4 @@
-# AnsibleLaunchPad
-
-Developer Node Setup
+# Developer Node Setup
 --------------------
 
 This document provides a guide on setting up various developer nodes for 
@@ -18,38 +16,29 @@ link](<https://github.com/ShaddGallegos/Base_EE-DE_Builder>).
     - Create an RHEL 9.6 QCOW2 image using Red Hat's Image Builder 
 service: <https://console.redhat.com/insights/image-builder>
 5. **Container**:
-    - Pull the latest `ansible-dev-tools-rhel8` image from Red Hat's 
-container registry:
+    - Pull the latest `ansible-dev-tools-rhel8` image from Red Hat's container registry:
         ```bash
-        podman pull 
-registry.redhat.io/ansible-automation-platform-25/ansible-dev-tools-rhel8:lregistry.redhat.io/ansible-automation-platform-25/ansibe-dev-tools-rhel8:latest
+        podman pull registry.redhat.io/ansible-automation-platform-25/ansible-dev-tools-rhel8:lregistry.redhat.io/ansible-automation-platform-25/ansibe-dev-tools-rhel8:latest
         ```
     - If you are using Docker, use the same command:
         ```bash
-        docker pull 
-registry.redhat.io/ansible-automation-platform-25/ansible-dev-tools-rhel8:lregistry.redhat.io/ansible-automation-platform-25/ansibe-dev-tools-rhel8:latest
+        docker pull registry.redhat.io/ansible-automation-platform-25/ansible-dev-tools-rhel8:lregistry.redhat.io/ansible-automation-platform-25/ansibe-dev-tools-rhel8:latest
         ```
     - Import the image into OpenShift (oc) and confirm the installation:
         ```bash
-        oc import-image 
-ansible-automation-platform-25/ansible-dev-tools-rhel8:25.2.0-48 
---from=registry.redhat.io/ansible-automation-platform-25/ansible-dev-tools---from=regstry.redhat.io/ansible-automation-platform-25/ansible-dev-tools-rhel8:latest --confirm
+        oc import-image ansible-automation-platform-25/ansible-dev-tools-rhel8:25.2.0-48 --from=registry.redhat.io/ansible-automation-platform-25/ansible-dev-tools---from=regstry.redhat.io/ansible-automation-platform-25/ansible-dev-tools-rhel8:latest --confirm
         ```
     - Install Visual Studio Code using the following steps:
-        1. Import the Red Hat's GPG key: `sudo rpm --import 
-https://packages.microsoft.com/keys/microsoft.asc`
+        1. Import the Red Hat's GPG key: `sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc`
         2. Create a new repository file:
             ```bash
-            sudo sh -c 'curl -sSL 
-https://packages.microsoft.com/config/rhel/9/prod.repo -o 
-/etc/yum.repos.d/vscode.repo'
+            sudo sh -c 'curl -sSL https://packages.microsoft.com/config/rhel/9/prod.repo -o /etc/yum.repos.d/vscode.repo'
             ```
         3. Check for updates and install Visual Studio Code:
             ```bash
             sudo dnf check-update && sudo dnf install code
             ```
-6. **Updating Images**: For more information, please refer to the 
-[repository](<https://github.com/ShaddGallegos/Base_EE-DE_Builder>).
+6. **Updating Images**: For more information, please refer to the [repository](<https://github.com/ShaddGallegos/Base_EE-DE_Builder>).
 7. **Documentation**:
     - Red Hat's Automation Good Practices Guide: 
 <https://github.com/redhat-cop/automation-good-practices>
