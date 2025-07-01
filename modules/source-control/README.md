@@ -1,4 +1,5 @@
 # Source Control
 -----------
 
-![Source Control](images/src-control.png)
+<img src="images/src-control.png" alt="source control image" width="400" height="400">
+

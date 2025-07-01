@@ -1,7 +1,7 @@
 # Developer Node Setup
 --------------------
 
-![Developer Node Setup](images/developer-node.png)
+<img src="images/developer-node.png" alt="final image" width="400" height="400">
 
 A comprehensive guide for setting up and working with Ansible, Ansible Automation Platform (AAP) 2.5, and development environments.
 
