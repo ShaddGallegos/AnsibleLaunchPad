@@ -10,4 +10,3 @@ Table of Contents
 [Developer Node Setup](docs/developer-node-setup.md)
 
 
-![AnsibleLaunchPAd](images/ansible-launchpad.png)
