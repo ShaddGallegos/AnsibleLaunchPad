@@ -48,11 +48,16 @@ echo ""
 
 # 1. Commit changes
 echo "1. Checking for staged changes before committing..."
-if ! git diff --cached --quiet; then
+
+# --- MODIFIED CHECK HERE ---
+# Use 'git status --porcelain' to check for staged changes (index status)
+# A line starting with 'M ', 'A ', 'D ', 'R ', 'C ' in the first column means staged changes.
+if [ -z "$(git status --porcelain | grep -E '^[MADRC][ ]')" ]; then
     echo "No changes staged. Please ensure you have staged your changes using 'git add .' before running this script."
     echo "Exiting script."
     exit 1
 fi
+# --- END MODIFIED CHECK ---
 
 echo "   Committing staged changes..."
 git commit -m "$COMMIT_MESSAGE" || { echo "Error: Failed to commit changes. Exiting."; exit 1; }
