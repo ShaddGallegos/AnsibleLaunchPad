@@ -2,6 +2,16 @@
 
 ![AnsibleLaunchPad](images/ansible-launchpad.png)
 
+## Purpose
+
+To offer a Red Hat opinionated view of on boarding Ansible Automation Platform automators.
+
+## Business Outcome
+
+- outcome1
+- outcome2
+- outcome3
+- outcome4
 
 
 Table of Contents
