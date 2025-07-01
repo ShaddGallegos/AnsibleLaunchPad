@@ -16,7 +16,7 @@ To offer a Red Hat opinionated view of on boarding Ansible Automation Platform a
 
 Table of Contents
 --------------------
-[Overview](modules/overview/index.md)
+[Overview](modules/overview/)
 
 [Developer Node Setup](modules/developer-node-setup/)
 
