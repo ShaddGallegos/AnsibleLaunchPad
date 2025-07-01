@@ -8,7 +8,7 @@ To offer a Red Hat opinionated view of on boarding Ansible Automation Platform a
 
 ## Business Outcomes
 
-- Business Capabilities 
+- Business Capabilities
 By leveraging Ansible Automation Platform, our customers can enhance their business capabilities through accelerated innovation and more efficient operations, enabling them to focus on strategic initiatives rather than manual tasks.
 
 - Speed of Delivery
@@ -23,11 +23,7 @@ Ansible Automation Platform bolsters our customers' risk management strategies b
 Table of Contents
 --------------------
 [Overview](modules/overview/)
-
 [Developer Node Setup](modules/developer-node-setup/)
-
 [Source Control](modules/source-control/)
-
 [Execution Environments](modules/ee/)
-
-[Final Exam](modules/final/)
+[Final](modules/final/)
