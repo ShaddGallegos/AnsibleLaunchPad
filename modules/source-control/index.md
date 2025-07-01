@@ -1,4 +1,4 @@
 # Source Control
 -----------
 
-![Source Control](images/source-control.png)
+![Source Control](images/src-control.png)

@@ -1,4 +1,4 @@
 # Overview
 -----------
 
-![Execution Environments](images/ee.jpeg)
+![Execution Environments](images/ee.png)
