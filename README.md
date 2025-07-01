@@ -6,12 +6,12 @@
 
 To offer a Red Hat opinionated view of on boarding Ansible Automation Platform automators.
 
-## Business Outcome
+## Business Outcomes
 
-- outcome1
-- outcome2
-- outcome3
-- outcome4
+- Business Capabilities
+- Speed of Delivery
+- Cost Management
+- Risk Management
 
 
 Table of Contents
