@@ -1,16 +1,16 @@
 # AnsibleLaunchPad
 
-![AnsibleLaunchPad](docs/images/ansible-launchpad.png)
+![AnsibleLaunchPad](modules/images/ansible-launchpad.png)
 
 
 
 Table of Contents
 --------------------
-[Overview](docs/overview.md)
+[Overview](modules/m0/overview.md)
 
-[Requirements](docs/requirements.md)
+[Requirements](modules/m1/requirements.md)
 
-[Developer Node Setup](docs/developer-node-setup.md)
+[Developer Node Setup](modules/m2/developer-node-setup.md)
 
-[Source Control](docs/source-control.md)
+[Source Control](modules/m3/source-control.md)
 
