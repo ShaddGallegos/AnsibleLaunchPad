@@ -12,3 +12,6 @@ Table of Contents
 
 [Source Control](modules/source-control/index.md)
 
+[Execution Environments](modules/ee/index.md)
+
+[Final Exam](modules/final/index.md)
