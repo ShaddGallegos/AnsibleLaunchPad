@@ -3,6 +3,7 @@
 ![AnsibleLaunchPad](docs/images/ansible-launchpad.png)
 
 
+
 Table of Contents
 --------------------
 [Overview](docs/overview.md)
@@ -11,5 +12,5 @@ Table of Contents
 
 [Developer Node Setup](docs/developer-node-setup.md)
 
-![Source Control](docs/source-control.md)
+[Source Control](docs/source-control.md)
 
