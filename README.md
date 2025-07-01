@@ -1,6 +1,6 @@
 # AnsibleLaunchPad
 
-![AnsibleLaunchPad](images/ansible-launchpad.png)
+<img src="images/ansible-launchpad.png" alt="ansible-launchpad image" width="400" height="400">
 
 ## Purpose
 
