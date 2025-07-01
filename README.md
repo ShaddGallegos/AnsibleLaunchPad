@@ -1,6 +1,6 @@
 # AnsibleLaunchPad
 
-![AnsibleLaunchPad](modules/images/ansible-launchpad.png)
+![AnsibleLaunchPad](images/ansible-launchpad.png)
 
 
 
