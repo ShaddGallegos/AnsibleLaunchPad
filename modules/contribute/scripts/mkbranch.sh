@@ -59,7 +59,7 @@ echo "Then, use 'git add .' or 'git add <files>' to stage your changes."
 echo ""
 echo "DO NOT PROCEED PAST THIS POINT IN THE SCRIPT."
 echo "Once you have made and staged your changes, run:"
-echo "    ./finish_branch_work.sh \"Your commit message here\""
+echo "    ./prbranch.sh \"Your commit message here\""
 echo "-------------------------------------------------------------"
 
 echo "--- 'start_work_on_branch.sh' Finished ---"

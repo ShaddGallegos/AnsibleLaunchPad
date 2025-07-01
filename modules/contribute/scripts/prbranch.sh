@@ -15,7 +15,7 @@ display_usage() {
     echo "  \"<commit_message>\" : The message for your commit (e.g., \"feat: Add new awesome feature\")."
     echo "  [main_branch_name] : (Optional) The name of your main branch, defaults to '$DEFAULT_MAIN_BRANCH'."
     echo ""
-    echo "This script assumes you have already run 'start_work_on_branch.sh',"
+    echo "This script assumes you have already run 'mkbranch.sh',"
     echo "made your changes, and staged them ('git add .')."
     echo "It will then:"
     echo "1. Commit your staged changes."
