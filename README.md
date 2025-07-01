@@ -20,8 +20,8 @@ Table of Contents
 
 [Developer Node Setup](modules/developer-node-setup/)
 
-[Source Control](modules/source-control/index.md)
+[Source Control](modules/source-control/)
 
-[Execution Environments](modules/ee/index.md)
+[Execution Environments](modules/ee/)
 
-[Final Exam](modules/final/index.md)
+[Final Exam](modules/final/)
