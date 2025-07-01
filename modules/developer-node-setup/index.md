@@ -1,7 +1,7 @@
 # Developer Node Setup
 --------------------
 
-![Developer Node Setup](images/developer-node-setup.png)
+![Developer Node Setup](images/developer-node.png)
 
 This document provides a guide on setting up various developer nodes for 
 using Ansible and other Red Hat tools. The options include:
