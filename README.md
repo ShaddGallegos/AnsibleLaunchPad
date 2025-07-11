@@ -4,34 +4,37 @@
 
 ## Purpose
 
-To offer a Red Hat opinionated view of on boarding Ansible Automation Platform automators.
+To provide a Red Hat–opinionated approach for quickly onboarding automators to the Ansible Automation Platform (AAP).
 
-## Business Outcomes
+## What is AAP?
 
-- Business Capabilities 
+**AAP** is Red Hat's enterprise automation platform that extends Ansible's capabilities with:
 
-    By leveraging Ansible Automation Platform, our customers can enhance their business capabilities through accelerated innovation and more efficient operations, enabling them to focus on strategic initiatives rather than manual tasks.
+- **Automation Controller**: Web-based UI and REST API for Ansible
+- **Automation Hub**: Centralized repository for certified content
+- **Event-Driven Ansible**: Reactive automation based on events
+- **Automation Mesh**: Distributed execution of automation across hybrid environments
+- **Analytics**: Insights and reporting on automation usage
+- **RBAC**: Role-based access control for enterprise security
 
-- Speed of Delivery
+AAP provides enterprise-grade features including support, security patches, certified content collections, and enhanced management capabilities.
 
-    Ansible Automation Platform dramatically increases the speed of delivery for our customers by automating complex IT processes, from infrastructure provisioning to application deployment, allowing them to bring products and services to market faster.
-
-- Cost Management
-
-    Our customers will experience significant improvements in cost management by implementing Ansible Automation Platform, as it reduces operational overhead, minimizes human error, and optimizes resource utilization across their IT environments.
-
-- Risk Management
-
-    Ansible Automation Platform bolsters our customers' risk management strategies by enforcing consistent configurations, automating security policies, and providing auditable trails of all changes, thereby reducing vulnerabilities and ensuring compliance.
+Key features:
+- **Agentless**: No need to install software on managed nodes
+- **Simple**: Uses YAML for configuration and automation scripts
+- **Powerful**: Can manage complex deployments and configurations
+- **Idempotent**: Ensures consistent state regardless of how many times you run it
 
 Table of Contents
+
 --------------------
-[Overview](modules/overview/)
 
-[Developer Node Setup](modules/developer-node-setup/)
+[1. Developer Node](modules/developer-node-setup/)
 
-[Source Control](modules/source-control/)
+[2. Source Control Basics](modules/source-control/)
 
-[Execution Environments](modules/ee/Base_EE-DE_Builder/)
+[3. Execution Environments](modules/ee/)
 
-[Final](modules/final/)
+[4. First Playbook](modules/first-playbook/)
+
+[5. Final Exam](modules/final/)

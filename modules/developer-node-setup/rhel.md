@@ -1,18 +1,11 @@
-# Developer Node Setup
+# RHEL Developer Node Setup
 --------------------
 
 <img src="images/developer-node.png" alt="final image" width="400" height="400">
 
-A comprehensive guide for setting up development environments to work with AAP.
+A comprehensive guide for setting up a RHEL development environment to work with Ansible Automation Platform (AAP).
 
 ## Table of Contents
-[RHEL Developer Node](./rhel.md)
-
-[Windows Developer Node](./windows.md)
-
-[MacOS Developer Node Setup](./macos.md)
-
-[Container Developer Node Setup](./container.md)
 
 - [Configuration](#configuration)
 - [Ansible Developer Nodes](#ansible-developer-nodes)
