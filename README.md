@@ -2,12 +2,10 @@
 
 <img src="images/ansible-launchpad.png" alt="ansible-launchpad image" width="400" height="400">
 
-## Purpose
+### Purpose
+To provide a Red Hat–opinionated approach for quickly onboarding automators to the Ansible Automation Platform (**AAP**).
 
-To provide a Red Hat–opinionated approach for quickly onboarding automators to the Ansible Automation Platform (AAP).
-
-## What is AAP?
-
+### What is AAP?
 **AAP** is Red Hat's enterprise automation platform that extends Ansible's capabilities with:
 
 - **Automation Controller**: Web-based UI and REST API for Ansible
@@ -17,7 +15,7 @@ To provide a Red Hat–opinionated approach for quickly onboarding automators to
 - **Analytics**: Insights and reporting on automation usage
 - **RBAC**: Role-based access control for enterprise security
 
-AAP provides enterprise-grade features including support, security patches, certified content collections, and enhanced management capabilities.
+**AAP** provides enterprise-grade features including support, security patches, certified content collections, and enhanced management capabilities.
 
 Key features:
 - **Agentless**: No need to install software on managed nodes
@@ -26,10 +24,9 @@ Key features:
 - **Idempotent**: Ensures consistent state regardless of how many times you run it
 
 Table of Contents
-
 --------------------
 
-[1. Developer Node](modules/developer-node-setup/)
+[1. Developer Node Setup](modules/developer-node-setup/)
 
 [2. Source Control Basics](modules/source-control/)
 
@@ -38,3 +35,4 @@ Table of Contents
 [4. First Playbook](modules/first-playbook/)
 
 [5. Final Exam](modules/final/)
+
