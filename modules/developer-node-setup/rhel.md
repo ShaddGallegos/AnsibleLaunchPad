@@ -65,7 +65,23 @@ localhost | SUCCESS => {
 
 If everything comes back green... Congrats! You have ran your first Ansible command and you are ready to start Automating!
 
-# Bonus - Run a super simple playbook.
+### Step 2 Bonus - Run a super simple playbook.
+Copy the following code block and save to a file on your machine such as hello.yaml. Make sure all spacing and indentation is preserved.
+```bash
+---
+- name: A super simple playbook
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+
+    - name: Display a message to the screen
+      ansible.builtin.debug:
+        msg: Ansible is really cool!
+```
+
+Run the ansible-playbook command to process the playbook
+```bash
 
 
 
