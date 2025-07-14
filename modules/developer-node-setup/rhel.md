@@ -12,13 +12,60 @@ A comprehensive guide for configuring and validating a RHEL development environm
 - A valid login to registry.redhat.io to pull execution environments
 
 ### Step 1
-Install ansible-core - Many Linux distributions will come pre loaded with ansible-core to check, execute the "ansible --version" command at a prompt, if the command is not found then we will need to install ansble-core. Installing ansible-core will automatically install all needed dependencies to include all Python and system packages needed for Ansible to function at a minimal level. The easiest way to install ansible-core is through pip (python package manager)
+Install ansible-core, which is the minimal package needed to run Ansible playbooks and ad-hoc commands - Many Linux distributions will come pre loaded with ansible-core to check, execute the "ansible --version" command at a prompt, if the command is not found then we will need to install ansble-core. Installing ansible-core will automatically install all needed dependencies to include all Python and system packages needed for Ansible to function at a minimal level. The easiest way to install ansible-core is through pip (python package manager)
 
+Ensure pip is available: 
 ```bash
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3 get-pip.py --user
 ```
+Install ansible-core
+```bash
+pip install --user ansible
+```
 
+### Step 2 
+Validate the installation by running a couple of ansible commands
+
+ansible --version will show the current package used by the system. This command will also display the python versions and ancillary directories.
+```bash
+[user@controller-vm ~]$ ansible --version
+ansible [core 2.15.13]
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/home/user/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/user/.local/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/user/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible
+  python version = 3.9.18 (main, Jul  3 2024, 00:00:00) [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)] (/usr/bin/python3)
+  jinja version = 3.1.6
+  libyaml = True
+```
+
+Run an Ansible ad-hoc command. In this case we are invoking the setup module which returns all the relavant information on the current system
+```bash
+ansible localhost -m setup
+localhost | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "192.168.124.157"
+        ],
+        "ansible_all_ipv6_addresses": [
+            "fe80::5054:ff:fe04:7fb0"
+        ],
+        "ansible_apparmor": {
+            "status": "disabled"
+        },
+        "ansible_architecture": "x86_64",
+        "ansible_bios_date": "04/01/2014",
+        "ansible_bios_vendor": "SeaBIOS",
+        "ansible_bios_version": "1.16.3-2.fc40",
+        "ansible_board_asset_tag": "NA",
+        "ansible_board_name": "NA",
+```
+
+If everything comes back green... Congrats! You have ran your first Ansible command and you are ready to start Automating!
+
+# Bonus - Run a super simple playbook.
 
 
 
