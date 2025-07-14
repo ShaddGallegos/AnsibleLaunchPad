@@ -11,7 +11,9 @@ A comprehensive guide for configuring and validating a RHEL development environm
 - Access to repositories (RPM or PIP)
 - A valid login to registry.redhat.io to pull execution environments
 
-# Step 1
+### Step 1
+- Install ansible-core
+Many Linux distributions will come pre loaded with ansible-core to check, execute the "ansible --version" command at a prompt, if the command is not found then we will need to install ansble-core.  
 
 
 ## Table of Contents
