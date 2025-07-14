@@ -82,7 +82,22 @@ Copy the following code block and save to a file on your machine such as hello.y
 
 Run the ansible-playbook command to process the playbook
 ```bash
+ansible-playbook hello.yaml 
 
+PLAY [A super simple playbook] *************************************************************************************************************************************************
+
+TASK [Display a message to the screen] *****************************************************************************************************************************************
+ok: [localhost] => {
+    "msg": "Ansible is really cool!"
+}
+
+PLAY RECAP *********************************************************************************************************************************************************************
+localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+```
+
+If everything is configured correctly and working, the Ansible playbook is processed and a message is displayed on the screen. 
+
+You should now have a minimal Ansible development environment. In the next step we will add on to our environment with other tools. 
 
 
 
