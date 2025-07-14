@@ -3,7 +3,16 @@
 
 <img src="images/developer-node.png" alt="final image" width="400" height="400">
 
-A comprehensive guide for setting up a RHEL development environment to work with Ansible Automation Platform (AAP).
+A comprehensive guide for configuring and validating a RHEL development environment to work with Ansible Automation Platform.
+
+## Assumptions
+- A relatively current x86_64 laptop running at least RHEL 7 or Fedora
+- An internet connection
+- Access to repositories (RPM or PIP)
+- A valid login to registry.redhat.io to pull execution environments
+
+# Step 1
+
 
 ## Table of Contents
 
