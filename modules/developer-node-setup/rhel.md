@@ -12,7 +12,14 @@ A comprehensive guide for configuring and validating a RHEL development environm
 - A valid login to registry.redhat.io to pull execution environments
 
 ### Step 1
-Install ansible-core - Many Linux distributions will come pre loaded with ansible-core to check, execute the "ansible --version" command at a prompt, if the command is not found then we will need to install ansble-core. Installing ansible-core will automatically install all needed dependencies to include all Python and system packages needed for Ansible to function at a minimal level. 
+Install ansible-core - Many Linux distributions will come pre loaded with ansible-core to check, execute the "ansible --version" command at a prompt, if the command is not found then we will need to install ansble-core. Installing ansible-core will automatically install all needed dependencies to include all Python and system packages needed for Ansible to function at a minimal level. The easiest way to install ansible-core is through pip (python package manager)
+
+```bash
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py --user
+```
+
+
 
 
 
