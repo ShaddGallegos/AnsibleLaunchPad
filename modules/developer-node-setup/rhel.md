@@ -3,7 +3,7 @@
 
 <img src="images/developer-node.png" alt="final image" width="400" height="400">
 
-A comprehensive guide for configuring and validating a RHEL development environment to work with Ansible Automation Platform.
+A comprehensive guide for configuring and validating a RHEL development environment to work with Ansible Automation Platform. This is a guide to get you up and running quickly. For a comprehensive guide please see the official documentation [here](https://docs.ansible.com/ansible-core/devel/installation_guide/index.html)
 
 ## Assumptions
 - A relatively current x86_64 laptop running at least RHEL 7 or Fedora
@@ -12,8 +12,8 @@ A comprehensive guide for configuring and validating a RHEL development environm
 - A valid login to registry.redhat.io to pull execution environments
 
 ### Step 1
-- Install ansible-core
-Many Linux distributions will come pre loaded with ansible-core to check, execute the "ansible --version" command at a prompt, if the command is not found then we will need to install ansble-core.  
+Install ansible-core - Many Linux distributions will come pre loaded with ansible-core to check, execute the "ansible --version" command at a prompt, if the command is not found then we will need to install ansble-core. Installing ansible-core will automatically install all needed dependencies to include all Python and system packages needed for Ansible to function at a minimal level. 
+
 
 
 ## Table of Contents
