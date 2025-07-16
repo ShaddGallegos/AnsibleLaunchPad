@@ -99,113 +99,66 @@ If everything is configured correctly and working, the Ansible playbook is proce
 
 You should now have a minimal Ansible development environment. In the next step we will add on to our environment with other tools. 
 
+### Step 3 - Install ansible-navigator and ancillary dev tools
+We have installed ansible-core and executed a simple ad-hoc command and playbook. We are now ready to install the rest of the development environment and start writing our 
+ansible playbooks. 
 
+By installing ansible-navigator we will install the majority of all development tools automatically. Installing ansible-navigator is pretty straightforward but for a comprehensive
+guide please see the docs [here](https://ansible.readthedocs.io/projects/navigator/).
 
-## Table of Contents
-
-- [Configuration](#configuration)
-- [Ansible Developer Nodes](#ansible-developer-nodes)
-- [Development Environment Setup](#development-environment-setup)
-- [Documentation](#documentation)
-- [Code Examples and Resources](#code-examples-and-resources)
-
-## Configuration
-
-### Configure ansible.cfg
-
-Create or update your `/etc/ansible/ansible.cfg` file with API tokens for both Automation Hub and Ansible Galaxy:
-
-```ini
-[galaxy]
-server_list = automation_hub, ansible-galaxy
-
-[galaxy_server.automation_hub]
-url=https://cloud.redhat.com/api/automation-hub/ 
-auth_url=https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token
-token=<YOUR CONSOLE.REDHAT.COM TOKEN HERE>
-
-[galaxy_server.ansible-galaxy]
-url=https://galaxy.ansible.com/
-token=<YOUR GALAXY TOKEN HERE>
-```
-
-## What is an Ansible Developer Node?
-
-An **Ansible Developer Node** is a development environment where you can write, test, and debug Ansible playbooks and automation content. It can be set up in various ways depending on your infrastructure and preferences.
-
-## Ansible Developer Nodes
-
-You can set up an Ansible Developer Node using any of the following options:
-
-### 1. Linux System Hardware
-Physical Linux system with Ansible installed directly. See installation script for setup details.
-
-### 2. Linux System VM
-Create a RHEL 9.6 QCOW2 image using Red Hat's Image Builder:
-- Visit: https://console.redhat.com/insights/image-builder
-- See setup script for detailed configuration
-
-### 3. Windows with WSL
-Run RHEL 9.6 in Windows Subsystem for Linux:
-- Create RHEL 9.6 WSL image: https://console.redhat.com/insights/image-builder
-- See setup script for installation steps
-
-### 4. Linux Container
-Use the official Red Hat Ansible Developer Tools container:
-
+To install ansible-navigator:
 ```bash
-# Using Podman
-podman pull registry.redhat.io/ansible-automation-platform-25/ansible-dev-tools-rhel8:latest
-
-# Using Docker
-docker pull registry.redhat.io/ansible-automation-platform-25/ansible-dev-tools-rhel8:latest
-
-# Using OpenShift
-oc import-image ansible-automation-platform-25/ansible-dev-tools-rhel8:25.2.0-48 \
-  --from=registry.redhat.io/ansible-automation-platform-25/ansible-dev-tools-rhel8:latest \
-  --confirm
+$ pip install ansible-navigator
 ```
-
-## Development Environment Setup
-
-### Updating DE/EE Images
-
-For building and maintaining Development Environment (DE) and Execution Environment (EE) images:
-
+To see se packages were installed:
 ```bash
-git clone https://github.com/ShaddGallegos/Base_EE-DE_Builder
-cd Base_EE-DE_Builder
-# See README.md for detailed instructions
-```
+$ pip list | grep ansible
+ansible-builder           3.1.0
+ansible-compat            24.10.0
+ansible-core              2.15.13
+ansible-lint              6.22.2
+ansible-navigator         24.2.0
+ansible-runner            2.4.1
 
-### Installing VS Code on RHEL
-
+Lets test ansible-navigator with our super simple playbook:
 ```bash
-# Import Microsoft GPG key
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+$ ansible-navigator run hello.yaml --ee false --mode stdout
 
-# Add VS Code repository
-sudo sh -c 'curl -ssl https://packages.microsoft.com/config/rhel/9/prod.repo -o /etc/yum.repos.d/vscode.repo'
+PLAY [A super simple playbook] *************************************************
 
-# Install VS Code
-sudo dnf check-update && sudo dnf install code
+TASK [Display a message to the screen] *****************************************
+ok: [localhost] => {
+    "msg": "Ansible is really cool!"
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+In this case we ran ansible-navigator in "local" mode. Ansible now makes use of execution environments so we need to prep our system to use containers. Podman is the preferred container
+runtime but docker can be used if preferred.
+
+To install podman:
+```bash
+$ sudo yum install podman
+$ podman --version
 ```
 
-## Documentation
+Now we have a bare bones installation of ansible-navigator and all the dev tools. We can test our super simple playbook with a container execution environment this time. 
+```bash
+$ ansible-navigator run hello.yaml --mode stdout
+```
 
-Essential documentation and learning resources:
+What happened here? We spun up a container (execution-environment) that ran the automation, meaning we decoupled the automation from your laptop to a container. This allows for more
+consistent development and minimizes the WIWOMM effext ("Well it works on my machine";-).
 
-- [Red Hat CoP Automation Good Practices](https://github.com/redhat-cop/automation-good-practices)
-- [Ansible Slides and Presentations](https://ansible.github.io/slides/)
-- [Awesome Ansible Community Resources](https://github.com/ansible-community/awesome-ansible)
+You can also spin up ansible-navigator in the tui interface by simply running:
+```bash
+$ ansible-navigator
+```
+Here you can poke around the ansible environment
 
-## Code Examples and Resources
 
-### Getting Started
 
-- [Ansible DevSpaces Demo](https://github.com/aoyawale/ansible-devspaces-demo)
-
-### Comprehensive Code Examples
 
 #### General Red Hat Resources
 - [Red Hat CoP](https://github.com/redhat-cop) - Everything Red Hat
