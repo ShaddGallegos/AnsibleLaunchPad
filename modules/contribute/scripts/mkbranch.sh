@@ -1,4 +1,10 @@
 #!/bin/bash
+# User-configurable variables - modify as needed
+USER="${USER}"
+USER_EMAIL="${USER}@${COMPANY_DOMAIN:-example.com}"
+COMPANY_NAME="${COMPANY_NAME:-Your Company}"
+COMPANY_DOMAIN="${COMPANY_DOMAIN:-example.com}"
+
 
 # mkbranch.sh
 # A script to create a new Git branch for development, ensuring the main branch is up-to-date,

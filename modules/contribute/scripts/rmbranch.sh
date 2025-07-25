@@ -1,4 +1,10 @@
 #!/bin/bash
+# User-configurable variables - modify as needed
+USER="${USER}"
+USER_EMAIL="${USER}@${COMPANY_DOMAIN:-example.com}"
+COMPANY_NAME="${COMPANY_NAME:-Your Company}"
+COMPANY_DOMAIN="${COMPANY_DOMAIN:-example.com}"
+
 
 # rmbranch.sh
 # A script to clean up and sync a Git repository by deleting a specified branch both locally and remotely,

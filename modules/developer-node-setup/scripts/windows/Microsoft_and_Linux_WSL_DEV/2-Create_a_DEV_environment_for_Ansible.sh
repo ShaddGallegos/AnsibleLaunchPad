@@ -1,3 +1,10 @@
+#!/bin/bash
+# User-configurable variables - modify as needed
+USER="${USER}"
+USER_EMAIL="${USER}@${COMPANY_DOMAIN:-example.com}"
+COMPANY_NAME="${COMPANY_NAME:-Your Company}"
+COMPANY_DOMAIN="${COMPANY_DOMAIN:-example.com}"
+
 # Create_a_DEV_environment_for_Ansible_development.sh
 # Script 2 (Bash)
 # This script is designed to be run inside the WSL environment after importing RHEL9.
