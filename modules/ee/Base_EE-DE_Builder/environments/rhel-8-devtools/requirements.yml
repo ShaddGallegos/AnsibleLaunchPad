@@ -1,15 +1,8 @@
 ---
 collections:
-  - name: ansible.utils
   - name: ansible.posix
+    version: '>=1.5.0'
+  - name: ansible.utils
+    version: '>=2.0.0'
   - name: community.general
-  - name: infra.aap_configuration
-  - name: infra.aap_utilities
-  - name: infra.ah_configuration
-  - name: infra.eda_configuration
-  - name: infra.ee_utilities
-  - name: infra.osbuild
-  - name: infra.aap_configuration
-  - name: containers.podman
-
-roles: []
+    version: '>=7.0.0'

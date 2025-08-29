@@ -1,7 +1,8 @@
 ---
 - name: Pull Execution Environments from Automation Hub to Controller
   hosts: localhost
-  gather_facts: no
+  gather_facts: false
+  
   vars:
     automation_hub_url: "automationhub.example.com"
     username: "admin"
@@ -47,7 +48,7 @@
         msg: "Image {{ item }} is available for use."
       loop: "{{ images }}"
       when: item in image_check.stdout
-      
+
     - name: Reset podman storage after transfer
       ansible.builtin.shell:
         cmd: "podman system reset -f"

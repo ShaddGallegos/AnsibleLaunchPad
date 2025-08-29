@@ -1,54 +1,111 @@
-# AnsibleLaunchPad
+# Ansible LaunchPad
 
-<img src="images/ansible-launchpad.png" alt="ansible-launchpad image" width="400" height="400">
+**Created:** May 2024
 
-#### Purpose
-This workshop offers an opinionated approach to rapidly onboarding automators to Red Hat's Ansible Automation Platform (AAP). AAP is Red Hat's enterprise-grade solution, providing essential features like support, scalability, security patches, certified content, and advanced management.
+## Synopsis
 
-##### High-level breakdown of AAP's components:
-- **Automation Gateway**: Web-based UI and REST API provides a unified interface and experience for AAP
-- **Automation Controller**: Control-plane and job engine for AAP
-- **Automation Hub**: Centralized repository for certified content
-- **Event-Driven Ansible (EDA)**: Reactive automation based on events
-- **Automation Mesh**: Distributed execution of automation across hybrid environments
-- **Analytics**: Insights and reporting on automation usage
-- **RBAC**: Role-based access control for enterprise security
+A comprehensive launching platform and framework for Ansible automation projects. Provides modular components, templates, and utilities for rapid Ansible project development and deployment.
 
-##### Key features:
-- **Agentless**: No need to install software on managed nodes
-- **Simple**: Uses YAML for configuration and automation scripts
-- **Powerful**: Can manage complex deployments and configurations
-- **Idempotent**: Ensures consistent state regardless of how many times you run it
+## Supported Operating Systems
 
-##### Workshop Target Audience
-- New Ansible developers/automators
-- Existing developers looking to contribute to automation
-- DevOps engineers
-- System administrators transitioning to automation
-- Team leads and architects looking to scale their automation efforts
+- Linux (All distributions with Ansible support)
+- macOS (with Ansible installed)
+- Windows (via WSL or native Ansible support)
 
-##### Workshop Duration
-- 2.5 - 3 Hours.
+## Quick Usage
 
-##### Learning Objectives
-- Set up their local development environment for Ansible on RHEL, Windows, containerized, and macOS using VS Code.
-- Utilize VS Code extensions for enhanced Ansible development.
-- Understand the basics of Git and GitHub/GitLab for basic source control management.
-- Connect to Red Hat Developer Spaces (OpenShift Dev Spaces) for a cloud-based development environment.
-- Write and test basic Ansible playbooks.
-- Implement best practices for Ansible content organization and structure.
+### Basic Framework Usage
 
-### Table of Contents (Training Modules)
---------------------
+```bash
+# Navigate to the LaunchPad directory
+cd AnsibleLaunchPad
 
-[1. Developer Node Setup](modules/developer-node-setup/)
+# Explore available modules
+ls modules/
 
-[2. Source Control Basics](modules/source-control/)
+# View available images and templates
+ls images/
+```
 
-[3. Execution Environments](modules/ee/)
+### Module Integration
 
-[4. First Playbook](modules/first-playbook/)
+The LaunchPad provides modular components for:
 
-[5. Final Exam](modules/final/)
+- Ansible project scaffolding
+- Common automation patterns
+- Reusable role templates
+- Configuration management frameworks
 
---------------------
+## Features and Capabilities
+
+### Core Features
+
+- Modular Ansible automation framework
+- Reusable component library
+- Project template system
+- Configuration management utilities
+- Standardized automation patterns
+
+### Framework Components
+
+- Module library for common automation tasks
+- Image resources for documentation and presentations
+- Template system for rapid project creation
+- Configuration management patterns
+- Best practices implementation
+
+### Development Support
+
+- Ansible project scaffolding
+- Code organization frameworks
+- Documentation templates
+- Testing patterns and examples
+- Deployment automation
+
+### Integration Features
+
+- Multi-platform compatibility
+- Scalable architecture patterns
+- Enterprise integration support
+- CI/CD pipeline integration
+- Version control optimization
+
+## Limitations
+
+- Requires Ansible installation and configuration
+- Network connectivity may be required for certain modules
+- Some components may require specific Ansible versions
+- Performance depends on target infrastructure
+- May require customization for specific use cases
+
+## Getting Help
+
+### Documentation
+
+- Explore the modules/ directory for component documentation
+- Review images/ directory for visual guides and references
+- Check individual module README files for specific usage
+- Examine configuration examples and templates
+
+### Support Resources
+
+- Ansible community documentation for general guidance
+- Module-specific documentation within each component
+- Best practices guides and examples
+- Configuration templates and examples
+
+### Common Issues
+
+- Ansible version compatibility: Ensure compatible Ansible version
+- Module dependencies: Check required Ansible collections
+- Configuration issues: Verify Ansible configuration files
+- Permission problems: Ensure proper access rights
+- Network connectivity: Check access to target systems
+
+## Legal Disclaimer
+
+This software is provided "as is" without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
+
+Use this software at your own risk. No warranty is implied or provided.
+
+**By Shadd**

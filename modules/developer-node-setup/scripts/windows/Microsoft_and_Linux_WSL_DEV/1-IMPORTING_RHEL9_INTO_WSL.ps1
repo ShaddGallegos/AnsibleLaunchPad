@@ -8,7 +8,7 @@
 # Run as Administrator
 
 # Define paths and variables
-$sevenZipUrl = "https://www.7-zip.org/a/7z2301-x64.msi"  # Check for latest version manually
+$sevenZipUrl = "https://www.7-zip.org/a/7z2301-x64.msi" # Check for latest version manually
 $installerPath = "$env:TEMP\7zip.msi"
 $sevenZipPath = "${env:ProgramFiles}\7-Zip\7z.exe"
 $tarGzFile = "RHEL9-x86_64.tar.gz"
@@ -17,10 +17,10 @@ $defaultWSLPath = "$env:LOCALAPPDATA\Packages\RHEL9.LocalState"
 
 # Check if 7-Zip is installed, install if missing
 if (!(Test-Path $sevenZipPath)) {
-    Write-Host "Downloading and installing 7-Zip..."
-    Invoke-WebRequest -Uri $sevenZipUrl -OutFile $installerPath
-    Start-Process -FilePath "msiexec.exe" -ArgumentList "/i $installerPath /qn" -Wait
-    Remove-Item -Path $installerPath -Force
+ Write-Host "Downloading and installing 7-Zip..."
+ Invoke-WebRequest -Uri $sevenZipUrl -OutFile $installerPath
+ Start-Process -FilePath "msiexec.exe" -ArgumentList "/i $installerPath /qn" -Wait
+ Remove-Item -Path $installerPath -Force
 }
 
 # Extract the .tar.gz file to a .tar file
